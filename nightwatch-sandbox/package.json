@@ -1,0 +1,17 @@
+{
+  "name": "nightwatch-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch -c ./Nightwatch.js --env default"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^2.21.2",
+    "nightwatch": "^0.8.18",
+    "selenium-server": "^2.53.0"
+  }
+}
