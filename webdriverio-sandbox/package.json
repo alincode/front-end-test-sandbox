@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "wdio wdio.conf.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "webdriverio": "^4.0.5"
+  },
+  "devDependencies": {
+    "wdio-mocha-framework": "^0.2.12"
   }
 }
