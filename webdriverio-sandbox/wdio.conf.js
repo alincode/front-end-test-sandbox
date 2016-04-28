@@ -1,5 +1,5 @@
 exports.config = {
-    
+
     //
     // ==================
     // Specify Test Files
@@ -57,7 +57,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'http://hikari.dev.exma-square.co',
+    baseUrl: 'http://blog.mokayo.com/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
