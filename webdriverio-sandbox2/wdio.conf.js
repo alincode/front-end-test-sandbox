@@ -1,5 +1,5 @@
 exports.config = {
-
+    
     //
     // ==================
     // Specify Test Files
@@ -32,7 +32,18 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
+    maxInstances: 10,
+    //
+    // If you have trouble getting all important capabilities together, check out the
+    // Sauce Labs platform configurator - a great tool to configure your capabilities:
+    // https://docs.saucelabs.com/reference/platforms-configurator
+    //
     capabilities: [{
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instance available you can make sure that not more than
+        // 5 instance gets started at a time.
+        maxInstances: 5,
+        //
         browserName: 'firefox'
     }],
     //
@@ -57,7 +68,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'http://blog.mokayo.com/',
+    baseUrl: 'http://blog.mokayo.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -101,7 +112,7 @@ exports.config = {
     framework: 'mocha',
     //
     // Test reporter for stdout.
-    // The following are supported: dot (default), spec, and xunit
+    // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
     // reporters: ['dot'],
     //
@@ -114,7 +125,7 @@ exports.config = {
     // =====
     // Hooks
     // =====
-    // WedriverIO provides several hooks you can use to interfere with the test process in order to enhance
+    // WebdriverIO provides several hooks you can use to interfere with the test process in order to enhance
     // it and to build services around it. You can either apply a single function or an array of
     // methods to it. If one of them returns with a promise, WebdriverIO will wait until that promise got
     // resolved to continue.
