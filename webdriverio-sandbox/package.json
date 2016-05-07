@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js",
-    "test-hot-reload": "chimp --mocha --watch --path=test"
+    "test": "wdio wdio.conf.js"
   },
   "keywords": [],
   "author": "",
