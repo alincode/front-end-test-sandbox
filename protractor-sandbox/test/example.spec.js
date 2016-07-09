@@ -27,4 +27,15 @@ describe('angularjs website', function() {
       'Selenium 2.0 bindings for NodeJS');
     done();
   });
+
+  it('used react and no serverside render website', function(done) {
+    browser.driver.get('https://www.evereasyfoods.com.tw');
+    var newLink = dvr.findElement(by.css("[href='/news/活動訊息']"));
+    newLink.click();
+    browser.sleep(6000);
+    var news1 = dvr.findElement(by.css(".news-list-item h2"));
+    expect(news1.getText()).to.eventually.equal(
+      '慶端午，GABA店鋪特製牛蒡粽限定販賣。');
+    done();
+  });
 });

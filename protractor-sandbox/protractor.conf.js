@@ -13,7 +13,7 @@ exports.config = {
 
   mochaOpts: {
     reporter: 'spec',
-    timeout: 15000
+    timeout: 60 * 30 * 1000
   },
   onPrepare: function() {
     global.dvr = browser.driver;
