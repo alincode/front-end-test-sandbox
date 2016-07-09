@@ -12,7 +12,7 @@ describe('angularjs website', function() {
     done();
   });
 
-  it('test no angularjs website', function(done) {
+  it('no angularjs website', function(done) {
     browser.driver.get('http://webdriver.io/');
     var myElement = browser.driver.findElement(by.css('h2'));
     expect(myElement.getText()).to.eventually.equal(
