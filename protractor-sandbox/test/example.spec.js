@@ -19,4 +19,12 @@ describe('angularjs website', function() {
       'Selenium 2.0 bindings for NodeJS');
     done();
   });
+
+  it('more elegant', function(done) {
+    browser.driver.get('http://webdriver.io/');
+    var myElement = dvr.findElement(by.css('h2'));
+    expect(myElement.getText()).to.eventually.equal(
+      'Selenium 2.0 bindings for NodeJS');
+    done();
+  });
 });

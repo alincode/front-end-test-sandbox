@@ -15,5 +15,7 @@ exports.config = {
     reporter: 'spec',
     timeout: 15000
   },
-  sync: true
+  onPrepare: function() {
+    global.dvr = browser.driver;
+  }
 };
